@@ -3,9 +3,9 @@ using MainMenuScreen.cs;
 using GameScreen.cs;
 using EndScreen.cs;
 
-namespace TypingGame {
+namespace QuickType {
     
-    class TypingGame {
+    class QuickType {
 
         static void Main(string[] args){
             
