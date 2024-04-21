@@ -1,7 +1,7 @@
 namespace QuickType.Screens {
 
     class MainMenuScreen : IScreen {
-        static void init() {
+        void init() {
             Console.WriteLine("Welcome to QuickType!")
         }
     }
