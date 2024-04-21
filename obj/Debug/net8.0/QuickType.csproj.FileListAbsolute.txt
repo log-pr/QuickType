@@ -1,0 +1,15 @@
+/home/logan/Programs/QuickType/bin/Debug/net8.0/QuickType
+/home/logan/Programs/QuickType/bin/Debug/net8.0/QuickType.deps.json
+/home/logan/Programs/QuickType/bin/Debug/net8.0/QuickType.runtimeconfig.json
+/home/logan/Programs/QuickType/bin/Debug/net8.0/QuickType.dll
+/home/logan/Programs/QuickType/bin/Debug/net8.0/QuickType.pdb
+/home/logan/Programs/QuickType/obj/Debug/net8.0/QuickType.GeneratedMSBuildEditorConfig.editorconfig
+/home/logan/Programs/QuickType/obj/Debug/net8.0/QuickType.AssemblyInfoInputs.cache
+/home/logan/Programs/QuickType/obj/Debug/net8.0/QuickType.AssemblyInfo.cs
+/home/logan/Programs/QuickType/obj/Debug/net8.0/QuickType.csproj.CoreCompileInputs.cache
+/home/logan/Programs/QuickType/obj/Debug/net8.0/QuickType.sourcelink.json
+/home/logan/Programs/QuickType/obj/Debug/net8.0/QuickType.dll
+/home/logan/Programs/QuickType/obj/Debug/net8.0/refint/QuickType.dll
+/home/logan/Programs/QuickType/obj/Debug/net8.0/QuickType.pdb
+/home/logan/Programs/QuickType/obj/Debug/net8.0/QuickType.genruntimeconfig.cache
+/home/logan/Programs/QuickType/obj/Debug/net8.0/ref/QuickType.dll
