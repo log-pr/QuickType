@@ -1,7 +1,7 @@
 namespace QuickType.Screens {
     
-    interface iScreen {
+    interface IScreen {
         void init();
     }
-    
+
 }
