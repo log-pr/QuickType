@@ -1,7 +1,4 @@
-using iScreen.cs;
-using MainMenuScreen.cs;
-using GameScreen.cs;
-using EndScreen.cs;
+using QuickType.Screens;
 
 namespace QuickType {
     
