@@ -1,0 +1,3 @@
+interface iScreen {
+    void init();
+}
