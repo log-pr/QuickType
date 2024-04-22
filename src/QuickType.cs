@@ -5,8 +5,8 @@ namespace QuickType {
     class QuickType {
 
         static void Main(string[] args){
-            var screen = new MainMenuScreen();
-            screen.init();
+            var currScreen = new MainMenuScreen();
+            currScreen.init();
         }
     }
 }
