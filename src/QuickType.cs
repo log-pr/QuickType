@@ -6,12 +6,14 @@ namespace QuickType {
 
         IScreen currScreen;
         string username;
+        string prsPath;
         public string message;
 
         public QuickType() {
 
             currScreen = new MainMenuScreen(this);
             message = "";
+            prsPath = "";
 
         }
 
@@ -36,16 +38,22 @@ namespace QuickType {
         public void setUsername(string name) {
 
             if (name.Length > 12) {
-                this.username = name.Substring(0, 12);
+                username = name.Substring(0, 12);
             } else {
-                this.username = name;
+                username = name;
             }
             
         }
 
         public string getUsername() {
 
-            return this.username;
+            return username;
+
+        }
+
+        public string getPRSPath() {
+
+            return prsPath;
 
         }
 
