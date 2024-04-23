@@ -2,6 +2,14 @@ namespace QuickType.Screens {
 
     class MainMenuScreen : IScreen {
 
+        string input;
+        QuickType master;
+
+        public MainMenuScreen(QuickType master) {
+            this.input = "";
+            this.master = master;
+        }
+
         public void init() {
             const int LeftSpacing = 15;
             const int RightSpacing = 20;
@@ -16,7 +24,10 @@ namespace QuickType.Screens {
             Console.WriteLine(string.Format("{0} -- {1}", "un <username>".PadLeft(LeftSpacing), "Set Username".PadRight(RightSpacing)));
             Console.WriteLine();
             Console.WriteLine();
-            string input = Console.ReadLine();
+
+            this.input = Console.ReadLine();
         }
+
+
     }
 }
