@@ -26,8 +26,17 @@ namespace QuickType.Screens {
             Console.WriteLine();
 
             this.input = Console.ReadLine();
+            this.processCommand();
         }
 
-
+        private void processCommand() {
+            if (this.input == "s") {
+                Console.WriteLine("Start Game");
+            } else if (this.input == "prs") {
+                Console.WriteLine("PR Sheet");
+            } else if (this.input == "un") {
+                Console.WriteLine("Username");
+            }
+        }
     }
 }
