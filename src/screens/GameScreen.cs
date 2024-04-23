@@ -16,5 +16,9 @@ namespace QuickType.Screens {
 
             input = Console.ReadLine();
         }
+
+        public void processCommand(string input) {
+
+        }
     }
 }

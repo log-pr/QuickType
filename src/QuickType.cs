@@ -8,12 +8,14 @@ namespace QuickType {
         string username;
         string prsPath;
         public string message;
+        string input;
 
         public QuickType() {
 
             currScreen = new MainMenuScreen(this);
             message = "";
             prsPath = "";
+            input = "";
 
         }
 
@@ -25,6 +27,8 @@ namespace QuickType {
                 message = "";
                 Console.WriteLine();
                 currScreen.init();
+                input = Console.ReadLine();
+                currScreen.processCommand(input);
             }
             
         }

@@ -11,6 +11,7 @@ namespace QuickType.Screens {
         }
 
         public void init() {
+
             const int LeftSpacing = 15;
             const int RightSpacing = 20;
 
@@ -25,11 +26,10 @@ namespace QuickType.Screens {
             Console.WriteLine();
             Console.WriteLine();
 
-            this.input = Console.ReadLine();
-            this.processCommand();
         }
 
-        private void processCommand() {
+        public void processCommand(string input) {
+
             if (input == "s") {
                 master.setScreen(new GameScreen(master));
             } else if (input == "prs") {
@@ -39,6 +39,7 @@ namespace QuickType.Screens {
                 master.setUsername(input.Substring(3));
                 master.message = "Username has been set to: " + master.getUsername();
             }
+            
         }
     }
 }

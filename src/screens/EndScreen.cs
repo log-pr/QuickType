@@ -6,5 +6,9 @@ namespace QuickType.Screens {
             Console.Clear();
             Console.WriteLine("Game Over.");
         }
+
+        public void processCommand(string input) {
+
+        }        
     }
 }
