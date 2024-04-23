@@ -31,7 +31,8 @@ namespace QuickType.Screens {
 
         private void processCommand() {
             if (this.input == "s") {
-                Console.WriteLine("Start Game");
+                master.setScreen(new GameScreen());
+                master.start();
             } else if (this.input == "prs") {
                 Console.WriteLine("PR Sheet");
             } else if (this.input == "un") {
