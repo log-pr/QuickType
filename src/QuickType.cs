@@ -5,6 +5,7 @@ namespace QuickType {
     class QuickType {
 
         IScreen currScreen;
+        string username;
 
         public QuickType() {
 
@@ -21,6 +22,12 @@ namespace QuickType {
         public void setScreen(IScreen screen) {
 
             currScreen = screen;
+
+        }
+
+        public void setUsername(string name) {
+
+            this.username = name.Substring(0, 12);
 
         }
 
