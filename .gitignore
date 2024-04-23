@@ -1,3 +1,4 @@
-# Ignore any files in /bin and /obj Folders
+# Ignore any files in /bin and /obj folders
+# .NET creates these when building and executing projects so they are not needed in the remote repository
 bin
 obj
