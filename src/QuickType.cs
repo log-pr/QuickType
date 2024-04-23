@@ -13,7 +13,7 @@ namespace QuickType {
 
         }
 
-        public void start() {
+        public void show() {
 
             currScreen.init();
 
@@ -44,7 +44,7 @@ namespace QuickType {
         static void Main(string[] args){
 
             var master = new QuickType();
-            master.start();
+            master.show();
 
         }
     }
