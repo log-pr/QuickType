@@ -6,17 +6,25 @@ namespace QuickType {
 
         IScreen currScreen;
         string username;
+        public string message;
 
         public QuickType() {
 
             currScreen = new MainMenuScreen(this);
+            message = "";
 
         }
 
         public void show() {
 
-            currScreen.init();
-
+            while (true) {
+                Console.Clear();
+                Console.WriteLine(message);
+                message = "";
+                Console.WriteLine();
+                currScreen.init();
+            }
+            
         }
 
         public void setScreen(IScreen screen) {

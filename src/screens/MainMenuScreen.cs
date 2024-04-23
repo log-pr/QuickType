@@ -13,7 +13,7 @@ namespace QuickType.Screens {
         public void init() {
             const int LeftSpacing = 15;
             const int RightSpacing = 20;
-            Console.Clear();
+            
             Console.WriteLine(string.Format("{0}", "Welcome to QuickType!".PadLeft(LeftSpacing)));
             Console.WriteLine();
             Console.WriteLine("Choose a command:");
@@ -32,12 +32,11 @@ namespace QuickType.Screens {
         private void processCommand() {
             if (input == "s") {
                 master.setScreen(new GameScreen());
-                master.show();
             } else if (input == "prs") {
                 Console.WriteLine("PR Sheet");
             } else if (input.Substring(0,3) == "un ") {
                 master.setUsername(input.Substring(3));
-                Console.WriteLine("Username has been set to: " + master.getUsername());
+                master.message = "Username has been set to: " + master.getUsername();
             }
         }
     }
