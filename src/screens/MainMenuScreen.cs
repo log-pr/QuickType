@@ -30,13 +30,14 @@ namespace QuickType.Screens {
         }
 
         private void processCommand() {
-            if (this.input == "s") {
+            if (input == "s") {
                 master.setScreen(new GameScreen());
                 master.start();
-            } else if (this.input == "prs") {
+            } else if (input == "prs") {
                 Console.WriteLine("PR Sheet");
-            } else if (this.input == "un") {
-                Console.WriteLine("Username");
+            } else if (input.Substring(0,3) == "un ") {
+                master.setUsername(input.Substring(3));
+                Console.WriteLine("Username has been set to: " + master.getUsername());
             }
         }
     }

@@ -27,7 +27,17 @@ namespace QuickType {
 
         public void setUsername(string name) {
 
-            this.username = name.Substring(0, 12);
+            if (name.Length > 12) {
+                this.username = name.Substring(0, 12);
+            } else {
+                this.username = name;
+            }
+            
+        }
+
+        public string getUsername() {
+
+            return this.username;
 
         }
 
