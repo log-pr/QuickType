@@ -2,7 +2,7 @@ namespace QuickType.Screens {
     
     class EndScreen : IScreen {
 
-        public void init() {
+        public void show() {
             Console.Clear();
             Console.WriteLine("Game Over.");
         }

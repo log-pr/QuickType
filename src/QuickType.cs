@@ -26,7 +26,7 @@ namespace QuickType {
                 Console.WriteLine(message);
                 message = "";
                 Console.WriteLine();
-                currScreen.init();
+                currScreen.show();
                 input = Console.ReadLine();
                 currScreen.processCommand(input);
             }

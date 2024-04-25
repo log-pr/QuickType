@@ -8,7 +8,7 @@ namespace QuickType.Screens {
             this.master = master;
         }
 
-        public void init() {
+        public void show() {
 
             Console.Clear();
             Console.WriteLine("Starting Game...");

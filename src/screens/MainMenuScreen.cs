@@ -10,7 +10,7 @@ namespace QuickType.Screens {
 
         }
 
-        public void init() {
+        public void show() {
 
             const int LeftSpacing = 15;
             const int RightSpacing = 20;
