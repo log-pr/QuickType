@@ -2,7 +2,6 @@ namespace QuickType.Screens {
     
     class GameScreen : IScreen {
 
-        string input;
         QuickType master;
 
         public GameScreen(QuickType master) {
@@ -11,10 +10,10 @@ namespace QuickType.Screens {
         }
 
         public void init() {
+
             Console.Clear();
             Console.WriteLine("Starting Game...");
 
-            input = Console.ReadLine();
         }
 
         public void processCommand(string input) {

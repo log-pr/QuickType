@@ -2,12 +2,12 @@ namespace QuickType.Screens {
 
     class MainMenuScreen : IScreen {
 
-        string input;
         QuickType master;
 
         public MainMenuScreen(QuickType master) {
-            this.input = "";
+
             this.master = master;
+
         }
 
         public void init() {
@@ -39,7 +39,7 @@ namespace QuickType.Screens {
                 master.setUsername(input.Substring(3));
                 master.message = "Username has been set to: " + master.getUsername();
             }
-            
+
         }
     }
 }
