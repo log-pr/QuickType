@@ -5,7 +5,6 @@ namespace QuickType.Screens {
         QuickType master;
 
         public GameScreen(QuickType master) {
-            this.input = "";
             this.master = master;
         }
 
