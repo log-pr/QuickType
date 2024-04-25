@@ -19,7 +19,7 @@ namespace QuickType {
 
         }
 
-        public void show() {
+        public void play() {
 
             while (true) {
                 Console.Clear();
@@ -64,7 +64,7 @@ namespace QuickType {
         static void Main(string[] args){
 
             var master = new QuickType();
-            master.show();
+            master.play();
 
         }
     }
