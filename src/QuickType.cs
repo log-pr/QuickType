@@ -21,6 +21,7 @@ namespace QuickType {
 
         public void play() {
 
+            //The main loop of the game that runs for its entire duration after being initialized
             while (true) {
                 Console.Clear();
                 Console.WriteLine(message);
