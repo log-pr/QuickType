@@ -36,8 +36,8 @@ namespace QuickType.Screens {
                 master.message = "The PR sheet has been opened in your default text viewer application.";
                 //System.Diagnostics.Process.Start(master.getPRSPath());
             } else if (input.Substring(0,3) == "un ") {
-                master.setUsername(input.Substring(3));
-                master.message = "Username has been set to: " + master.getUsername();
+                master.Username = input.Substring(3);
+                master.message = "Username has been set to: " + master.Username;
             }
 
         }

@@ -5,7 +5,17 @@ namespace QuickType {
     class QuickType {
 
         IScreen currScreen;
-        string username;
+        private string username;
+        public string Username {
+            get {return username;}
+            set {
+                if (value.Length > 12) {
+                    username = value.Substring(0, 12);
+                } else {
+                    username = value;
+                }
+            }
+        }
         string prsPath;
         public string message;
         string input;
@@ -23,6 +33,7 @@ namespace QuickType {
 
             //The main loop of the game that runs for its entire duration after being initialized
             while (true) {
+
                 Console.Clear();
                 Console.WriteLine(message);
                 message = "";
@@ -31,6 +42,7 @@ namespace QuickType {
                 Console.Write(":");
                 input = Console.ReadLine();
                 currScreen.processCommand(input);
+
             }
             
         }
@@ -38,22 +50,6 @@ namespace QuickType {
         public void setScreen(IScreen screen) {
 
             currScreen = screen;
-
-        }
-
-        public void setUsername(string name) {
-
-            if (name.Length > 12) {
-                username = name.Substring(0, 12);
-            } else {
-                username = name;
-            }
-            
-        }
-
-        public string getUsername() {
-
-            return username;
 
         }
 
