@@ -4,7 +4,10 @@ namespace QuickType {
     
     class QuickType {
 
-        IScreen currScreen;
+        private IScreen currScreen;
+        public IScreen CurrScreen {
+            set {currScreen = value;}
+        }
         private string username;
         public string Username {
             get {return username;}

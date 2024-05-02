@@ -31,7 +31,7 @@ namespace QuickType.Screens {
         public void processCommand(string input) {
 
             if (input == "s") {
-                master.setScreen(new GameScreen(master));
+                master.CurrScreen = new GameScreen(master);
             } else if (input == "prs") {
                 master.message = "The PR sheet has been opened in your default text viewer application.";
                 //System.Diagnostics.Process.Start(master.getPRSPath());
