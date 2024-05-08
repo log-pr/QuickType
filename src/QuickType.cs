@@ -6,6 +6,14 @@ namespace QuickType {
 
         public IScreen CurrScreen {get; set;}
 
+        private string prsPath;
+        public string PrsPath {get;}
+
+        public string Message {get; set;}
+        
+        private string input;
+        public string Input {set {input = value;}}
+        
         private string username;
         public string Username {
             get {return username;}
@@ -16,15 +24,6 @@ namespace QuickType {
                     username = value;
                 }
             }
-        }
-
-        private string prsPath;
-        public string PrsPath {get;}
-        public string Message {get; set;}
-        
-        private string input;
-        public string Input {
-            set {input = value;}
         }
 
         public QuickType() {
