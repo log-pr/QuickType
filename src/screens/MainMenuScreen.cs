@@ -33,11 +33,11 @@ namespace QuickType.Screens {
             if (input == "s") {
                 master.CurrScreen = new GameScreen(master);
             } else if (input == "prs") {
-                master.message = "The PR sheet has been opened in your default text viewer application.";
+                master.Message = "The PR sheet has been opened in your default text viewer application.";
                 //System.Diagnostics.Process.Start(master.getPRSPath());
             } else if (input.Substring(0,3) == "un ") {
                 master.Username = input.Substring(3);
-                master.message = "Username has been set to: " + master.Username;
+                master.Message = "Username has been set to: " + master.Username;
             }
 
         }

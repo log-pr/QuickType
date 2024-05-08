@@ -4,10 +4,8 @@ namespace QuickType {
     
     class QuickType {
 
-        private IScreen currScreen;
-        public IScreen CurrScreen {
-            set {currScreen = value;}
-        }
+        public IScreen CurrScreen {get; set;}
+
         private string username;
         public string Username {
             get {return username;}
@@ -19,14 +17,20 @@ namespace QuickType {
                 }
             }
         }
-        string prsPath;
-        public string message;
-        string input;
+
+        private string prsPath;
+        public string PrsPath {get;}
+        public string Message {get; set;}
+        
+        private string input;
+        public string Input {
+            set {input = value;}
+        }
 
         public QuickType() {
 
-            currScreen = new MainMenuScreen(this);
-            message = "";
+            CurrScreen = new MainMenuScreen(this);
+            Message = "";
             prsPath = "";
             input = "";
 
@@ -38,28 +42,16 @@ namespace QuickType {
             while (true) {
 
                 Console.Clear();
-                Console.WriteLine(message);
-                message = "";
+                Console.WriteLine(Message);
+                Message = "";
                 Console.WriteLine();
-                currScreen.show();
+                CurrScreen.show();
                 Console.Write(":");
-                input = Console.ReadLine();
-                currScreen.processCommand(input);
+                Input = Console.ReadLine();
+                CurrScreen.processCommand(input);
 
             }
             
-        }
-
-        public void setScreen(IScreen screen) {
-
-            currScreen = screen;
-
-        }
-
-        public string getPRSPath() {
-
-            return prsPath;
-
         }
 
         static void Main(string[] args){
