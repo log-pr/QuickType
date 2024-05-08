@@ -35,7 +35,7 @@ namespace QuickType {
 
         }
 
-        public void play() {
+        public void Play() {
 
             //The main loop of the game that runs for its entire duration after being initialized
             while (true) {
@@ -56,7 +56,7 @@ namespace QuickType {
         static void Main(string[] args){
 
             var master = new QuickType();
-            master.play();
+            master.Play();
 
         }
     }
