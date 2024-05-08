@@ -9,7 +9,7 @@ namespace QuickType {
         private string prsPath;
         public string PrsPath {get;}
 
-        public string Message {get; set;}
+        public string message;
         
         private string input;
         public string Input {set {input = value;}}
@@ -29,7 +29,7 @@ namespace QuickType {
         public QuickType() {
 
             CurrScreen = new MainMenuScreen(this);
-            Message = "";
+            message = "";
             prsPath = "";
             input = "";
 
@@ -41,8 +41,8 @@ namespace QuickType {
             while (true) {
 
                 Console.Clear();
-                Console.WriteLine(Message);
-                Message = "";
+                Console.WriteLine(message);
+                message = "";
                 Console.WriteLine();
                 CurrScreen.show();
                 Console.Write(":");
