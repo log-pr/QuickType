@@ -4,11 +4,13 @@ namespace QuickType.Screens {
 
         private QuickType master;
         private bool gamemodeIsSelected;
+        private bool playBookIsSelected;
 
         public GameScreen(QuickType master) {
 
             this.master = master;
             gamemodeIsSelected = false;
+            playBookIsSelected = false;
 
         }
 
@@ -23,10 +25,10 @@ namespace QuickType.Screens {
                 Console.WriteLine("     s -- Standard");
                 Console.WriteLine();
 
-            } else {
+            } else if ({
 
 
-                
+
             }
             
 
