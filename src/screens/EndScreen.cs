@@ -2,14 +2,13 @@ namespace QuickType.Screens {
     
     class EndScreen : IScreen {
 
-        public void show() {
+        public void Show() {
 
-            Console.Clear();
             Console.WriteLine("Game Over.");
-            
+
         }
 
-        public void processCommand(string input) {
+        public void ProcessCommand(string input) {
 
         }        
     }

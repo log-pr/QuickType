@@ -44,10 +44,10 @@ namespace QuickType {
                 Console.WriteLine(message);
                 message = "";
                 Console.WriteLine();
-                CurrScreen.show();
+                CurrScreen.Show();
                 Console.Write(":");
                 Input = Console.ReadLine();
-                CurrScreen.processCommand(input);
+                CurrScreen.ProcessCommand(input);
 
             }
             

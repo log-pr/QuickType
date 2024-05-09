@@ -7,17 +7,18 @@ namespace QuickType.Screens {
         public GameScreen(QuickType master) {
 
             this.master = master;
-            
+
         }
 
-        public void show() {
+        public void Show() {
 
-            Console.Clear();
             Console.WriteLine("Starting Game...");
 
         }
 
-        public void processCommand(string input) {
+
+
+        public void ProcessCommand(string input) {
 
         }
     }

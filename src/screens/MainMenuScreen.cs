@@ -10,7 +10,7 @@ namespace QuickType.Screens {
 
         }
 
-        public void show() {
+        public void Show() {
 
             const int LeftSpacing = 15;
             const int RightSpacing = 20;
@@ -28,7 +28,7 @@ namespace QuickType.Screens {
 
         }
 
-        public void processCommand(string input) {
+        public void ProcessCommand(string input) {
 
             if (input == "s") {
                 master.CurrScreen = new GameScreen(master);
