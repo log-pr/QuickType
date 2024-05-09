@@ -4,13 +4,13 @@ namespace QuickType.Screens {
 
         private QuickType master;
         private bool gamemodeIsSelected;
-        private bool playBookIsSelected;
+        private bool playbookIsSelected;
 
         public GameScreen(QuickType master) {
 
             this.master = master;
             gamemodeIsSelected = false;
-            playBookIsSelected = false;
+            playbookIsSelected = false;
 
         }
 
@@ -25,9 +25,12 @@ namespace QuickType.Screens {
                 Console.WriteLine("     s -- Standard");
                 Console.WriteLine();
 
-            } else if ({
+            } else if (!playbookIsSelected) {
 
-
+                Console.WriteLine("Starting Game...");
+                Console.WriteLine();
+                Console.WriteLine("Select a Playbook:");
+                Console.WriteLine();
 
             }
             
