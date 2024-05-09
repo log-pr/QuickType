@@ -7,7 +7,7 @@ namespace QuickType {
         public IScreen CurrScreen {get; set;}
 
         private string prsPath;
-        public string PrsPath {get;}
+        public string PrsPath {get {return prsPath;}}
 
         public string message;
         
