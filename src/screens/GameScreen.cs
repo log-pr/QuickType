@@ -2,11 +2,13 @@ namespace QuickType.Screens {
     
     class GameScreen : IScreen {
 
-        QuickType master;
+        private QuickType master;
+        private bool gamemodeIsSelected;
 
         public GameScreen(QuickType master) {
 
             this.master = master;
+            gamemodeIsSelected = false;
 
         }
 
@@ -16,7 +18,7 @@ namespace QuickType.Screens {
 
         }
 
-
+        private ShowStart() 
 
         public void ProcessCommand(string input) {
 
