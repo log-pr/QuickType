@@ -31,13 +31,19 @@ namespace QuickType.Screens {
         public void ProcessCommand(string input) {
 
             if (input == "s") {
+
                 master.CurrScreen = new GameScreen(master);
+
             } else if (input == "prs") {
+
                 master.message = "The PR sheet has been opened in your default text viewer application.";
-                //System.Diagnostics.Process.Start(master.getPRSPath());
+                //System.Diagnostics.Process.Start(master.PrsPath());
+
             } else if (input.Substring(0,3) == "un ") {
-                master.Username = input.Substring(3);
+
+                master.Username = input.Substring(3); //skips the first 3 characters so "un " is skipped
                 master.message = "Username has been set to: " + master.Username;
+
             }
         }
     }
