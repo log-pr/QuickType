@@ -14,11 +14,23 @@ namespace QuickType.Screens {
 
         public void Show() {
 
-            Console.WriteLine("Starting Game...");
+            if (!gamemodeIsSelected) {
+
+                Console.WriteLine("Starting Game...");
+                Console.WriteLine();
+                Console.WriteLine("Select a Gamemode:");
+                Console.WriteLine();
+                Console.WriteLine("     s -- Standard");
+                Console.WriteLine();
+
+            } else {
+
+
+                
+            }
+            
 
         }
-
-        private ShowStart() 
 
         public void ProcessCommand(string input) {
 
