@@ -46,7 +46,8 @@ namespace QuickType {
                 Console.WriteLine();
                 CurrScreen.Show();
                 Console.Write(":");
-                Input = Console.ReadLine();
+                input = Console.ReadLine();
+                if (input == "q") {break;}
                 CurrScreen.ProcessCommand(input);
 
             }

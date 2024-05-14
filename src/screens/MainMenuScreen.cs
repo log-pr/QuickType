@@ -23,6 +23,7 @@ namespace QuickType.Screens {
             Console.WriteLine(string.Format("{0} -- {1}", "s".PadLeft(LeftSpacing), "Start Game".PadRight(RightSpacing)));
             Console.WriteLine(string.Format("{0} -- {1}", "prs".PadLeft(LeftSpacing), "View the PR Sheet".PadRight(RightSpacing)));
             Console.WriteLine(string.Format("{0} -- {1}", "un <username>".PadLeft(LeftSpacing), "Set Username".PadRight(RightSpacing)));
+            Console.WriteLine(string.Format("{0} -- {1}", "q".PadLeft(LeftSpacing), "Quit (Any Screen)".PadRight(RightSpacing)));
             Console.WriteLine();
             Console.WriteLine();
 
