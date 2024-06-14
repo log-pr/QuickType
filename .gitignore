@@ -2,3 +2,4 @@
 # .NET creates these when building and executing projects so they are not needed in the remote repository
 bin
 obj
+QuickType.sln
