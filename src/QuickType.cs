@@ -15,7 +15,7 @@ namespace QuickType {
         private string input;
         public string Input {set {input = value;}}
         
-        private string username;
+        private string? username;
         public string Username {
             get {return username;}
             set {
