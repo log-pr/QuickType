@@ -41,7 +41,6 @@ namespace QuickTypeGame {
             message = "";
             prsPath = "";
             input = "";
-            playbooks = [];
             InitPlaybooks();
 
         }
@@ -67,9 +66,11 @@ namespace QuickTypeGame {
 
         void InitPlaybooks() {
             //for each playbook txt file, create a Playbook instance for it
+            playbooks = [];
+            
             string currentDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location); 
             string playbookFolder = Path.Combine(currentDirectory, "../../../playbooks/");
-            DirectoryInfo d = new DirectoryInfo(playbookFolder);
+            DirectoryInfo d = new(playbookFolder);
 
             Console.WriteLine(currentDirectory);
             Console.WriteLine(playbookFolder);
