@@ -1,7 +1,8 @@
-using QuickType.Screens;
-using QuickType.Playbook;
+using QuickTypeGame.Screens;
+using QuickTypeGame.PlaybookClass;
+using System.ComponentModel;
 
-namespace QuickType {
+namespace QuickTypeGame {
     
     class QuickType {
 
@@ -26,6 +27,8 @@ namespace QuickType {
                 }
             }
         }
+
+        private Playbook[]? playbooks;
 
         public QuickType() {
 
@@ -55,9 +58,14 @@ namespace QuickType {
             
         }
 
+        void InitPlaybooks() {
+            //for each playbook txt file, create a Playbook instance for it
+        }
+
         static void Main(string[] args){
 
             var master = new QuickType();
+            master.InitPlaybooks();
             master.Play();
 
         }

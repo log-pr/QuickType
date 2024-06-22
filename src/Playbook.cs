@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 
-namespace QuickType.Playbook {
+namespace QuickTypeGame.PlaybookClass {
     
     class Playbook : IEnumerable {
 

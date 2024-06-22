@@ -1,4 +1,4 @@
-namespace QuickType.Screens {
+namespace QuickTypeGame.Screens {
 
     class MainMenuScreen : IScreen {
 
