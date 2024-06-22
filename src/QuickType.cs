@@ -36,6 +36,7 @@ namespace QuickTypeGame {
             message = "";
             prsPath = "";
             input = "";
+            InitPlaybooks();
 
         }
 
@@ -65,7 +66,6 @@ namespace QuickTypeGame {
         static void Main(string[] args){
 
             var master = new QuickType();
-            master.InitPlaybooks();
             master.Play();
 
         }
