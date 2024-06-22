@@ -1,6 +1,8 @@
 using QuickTypeGame.Screens;
 using QuickTypeGame.PlaybookClass;
 using System.ComponentModel;
+using System.Reflection;
+using System.Security.Cryptography;
 
 namespace QuickTypeGame {
     
@@ -28,7 +30,10 @@ namespace QuickTypeGame {
             }
         }
 
-        private Playbook[]? playbooks;
+        private List<Playbook> playbooks;
+        public List<Playbook> Playbooks {
+            get {return playbooks;}
+        }
 
         public QuickType() {
 
@@ -36,6 +41,7 @@ namespace QuickTypeGame {
             message = "";
             prsPath = "";
             input = "";
+            playbooks = [];
             InitPlaybooks();
 
         }
@@ -61,6 +67,18 @@ namespace QuickTypeGame {
 
         void InitPlaybooks() {
             //for each playbook txt file, create a Playbook instance for it
+            string currentDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location); 
+            string playbookFolder = Path.Combine(currentDirectory, "../../../playbooks/");
+            DirectoryInfo d = new DirectoryInfo(playbookFolder);
+
+            Console.WriteLine(currentDirectory);
+            Console.WriteLine(playbookFolder);
+
+            foreach (var file in d.GetFiles()) {
+                string text = File.ReadAllText(file.FullName);
+                string title = file.Name;
+                playbooks.Add(new Playbook(text, title));
+            }
         }
 
         static void Main(string[] args){

@@ -1,3 +1,5 @@
+using QuickTypeGame.PlaybookClass;
+
 namespace QuickTypeGame.Screens {
     
     class GameScreen : IScreen {
@@ -32,6 +34,11 @@ namespace QuickTypeGame.Screens {
                 Console.WriteLine("Select a Playbook:");
                 Console.WriteLine();
                 //displaying all playbooks is somewhat hard to implement so I will do that later
+                int i = 1;
+                foreach (Playbook p in master.Playbooks) {
+                    Console.WriteLine(i++.ToString()+" "+p.Title);
+                }
+                Console.WriteLine();
 
             }
             

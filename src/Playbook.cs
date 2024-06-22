@@ -6,9 +6,14 @@ namespace QuickTypeGame.PlaybookClass {
     class Playbook : IEnumerable {
 
         private string text;
-        public Playbook(string text) {
+        private string title;
+        public string Title {
+            get {return title;}
+        }
+        public Playbook(string text, string title) {
             
             this.text = text;
+            this.title = title;
 
         }
 
