@@ -40,7 +40,7 @@ namespace QuickType.Screens {
                 master.message = "The PR sheet has been opened in your default text viewer application.";
                 //System.Diagnostics.Process.Start(master.PrsPath());
 
-            } else if (input.Substring(0,3) == "un ") {
+            } else if (input.Length >= 3 && input.Substring(0,3) == "un ") {
 
                 master.Username = input.Substring(3); //skips the first 3 characters so "un " is skipped
                 master.message = "Username has been set to: " + master.Username;

@@ -16,10 +16,10 @@ namespace QuickType {
         public string Input {set {input = value;}}
         
         private string? username;
-        public string Username {
+        public string? Username {
             get {return username;}
             set {
-                if (value.Length > 12) {
+                if (value != null && value.Length > 12) {
                     username = value.Substring(0, 12);
                 } else {
                     username = value;
@@ -47,7 +47,7 @@ namespace QuickType {
                 Console.WriteLine();
                 CurrScreen.Show();
                 Console.Write(":");
-                input = Console.ReadLine();
+                input = Console.ReadLine() ?? "";
                 if (input == "q") {break;}
                 CurrScreen.ProcessCommand(input);
 
