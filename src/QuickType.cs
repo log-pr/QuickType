@@ -30,10 +30,10 @@ namespace QuickTypeGame {
             }
         }
 
-        private List<Playbook> playbooks;
-        public List<Playbook> Playbooks {
-            get {return playbooks;}
-        }
+        private List<Playbook>? playbooks;
+        public List<Playbook> Playbooks {get {return playbooks ?? [];}}
+
+        public Playbook? activePlaybook;
 
         public QuickType() {
 

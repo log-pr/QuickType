@@ -53,7 +53,21 @@ namespace QuickTypeGame.Screens {
 
             } else if (!playbookIsSelected) {
 
+                int input_int;
 
+                //checks the input to make sure that it is a number, if it is not then nothing happens
+                try {
+                    input_int = Int32.Parse(input);
+                } catch {
+                    input_int = 0;
+                }
+
+                if (input_int <= master.Playbooks.Count && input_int >= 1) {
+                    master.activePlaybook = master.Playbooks[input_int-1];
+                    master.message = "Playbook \""+master.activePlaybook.Title+"\" has been selected.";
+                }
+
+                
 
             }
 
