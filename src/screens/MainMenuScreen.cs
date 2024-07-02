@@ -33,12 +33,12 @@ namespace QuickTypeGame.Screens {
 
             if (input == "s") {
 
-                master.CurrScreen = new GameScreen(master);
+                master.CurrScreen = new PreGameScreen(master);
 
             } else if (input == "prs") {
 
                 master.message = "The PR sheet has been opened in your default text viewer application.";
-                //System.Diagnostics.Process.Start(master.PrsPath());
+                //System.Diagnostics.Process.Start(master.PrsPath);
 
             } else if (input.Length >= 3 && input.Substring(0,3) == "un ") {
 

@@ -30,17 +30,21 @@ namespace QuickTypeGame {
             }
         }
 
-        private List<Playbook>? playbooks;
+        private List<Playbook> playbooks;
         public List<Playbook> Playbooks {get {return playbooks ?? [];}}
 
         public Playbook? activePlaybook;
+
+        private string currentDirectory;
 
         public QuickType() {
 
             CurrScreen = new MainMenuScreen(this);
             message = "";
-            prsPath = "";
             input = "";
+            currentDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            prsPath = Path.Combine(currentDirectory, "../../../prs");
+            playbooks = [];
             InitPlaybooks();
 
         }
@@ -67,13 +71,9 @@ namespace QuickTypeGame {
         void InitPlaybooks() {
             //for each playbook txt file, create a Playbook instance for it
             playbooks = [];
-            
-            string currentDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location); 
+
             string playbookFolder = Path.Combine(currentDirectory, "../../../playbooks/");
             DirectoryInfo d = new(playbookFolder);
-
-            Console.WriteLine(currentDirectory);
-            Console.WriteLine(playbookFolder);
 
             foreach (var file in d.GetFiles()) {
                 string text = File.ReadAllText(file.FullName);
