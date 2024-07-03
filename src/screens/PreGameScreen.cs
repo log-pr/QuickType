@@ -33,11 +33,20 @@ namespace QuickTypeGame.Screens {
                 Console.WriteLine();
                 Console.WriteLine("Select a Playbook:");
                 Console.WriteLine();
-                //displaying all playbooks is somewhat hard to implement so I will do that later
                 int i = 1;
                 foreach (Playbook p in master.Playbooks) {
                     Console.WriteLine(i++.ToString()+" "+p.Title);
                 }
+                Console.WriteLine();
+
+            } else if (gamemodeIsSelected && playbookIsSelected) {
+
+                Console.WriteLine("Press Enter to begin.");
+                Console.WriteLine();
+
+            } else {
+                //this should theoretically never occur
+                Console.WriteLine("Something went wrong. Please restart the program.");
                 Console.WriteLine();
 
             }
@@ -65,9 +74,16 @@ namespace QuickTypeGame.Screens {
                 if (input_int <= master.Playbooks.Count && input_int >= 1) {
                     master.activePlaybook = master.Playbooks[input_int-1];
                     master.message = "Playbook \""+master.activePlaybook.Title+"\" has been selected.";
+                    playbookIsSelected = true;
                 }
 
+            } else if (gamemodeIsSelected && playbookIsSelected) {
+
+                master.CurrScreen = new GameScreen(master);
+
+            } else {
                 
+                //theoretically should never occur but may need to add a failsafe of some sort here
 
             }
 

@@ -4,7 +4,13 @@ namespace QuickTypeGame.Screens {
 
     class GameScreen : IScreen {
 
-        public GameScreen() {}
+        QuickType master;
+
+        public GameScreen(QuickType master) {
+
+            this.master = master;
+
+        }
 
         public void Show() {}
 
