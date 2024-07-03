@@ -41,7 +41,7 @@ namespace QuickTypeGame.Screens {
 
             } else if (gamemodeIsSelected && playbookIsSelected) {
 
-                Console.WriteLine("Press Enter to begin.");
+                Console.WriteLine("Press Enter to begin or type 'b' to go back.");
                 Console.WriteLine();
 
             } else {
@@ -72,14 +72,26 @@ namespace QuickTypeGame.Screens {
                 }
 
                 if (input_int <= master.Playbooks.Count && input_int >= 1) {
+
                     master.activePlaybook = master.Playbooks[input_int-1];
                     master.message = "Playbook \""+master.activePlaybook.Title+"\" has been selected.";
                     playbookIsSelected = true;
+                    
                 }
 
             } else if (gamemodeIsSelected && playbookIsSelected) {
 
-                master.CurrScreen = new GameScreen(master);
+                if (input == "b") {
+
+                    gamemodeIsSelected = false;
+                    master.activePlaybook = null;
+                    playbookIsSelected = false;
+
+                } else if (input == "") {
+
+                    master.CurrScreen = new GameScreen(master);
+
+                }
 
             } else {
                 

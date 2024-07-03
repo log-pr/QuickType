@@ -76,9 +76,11 @@ namespace QuickTypeGame {
             DirectoryInfo d = new(playbookFolder);
 
             foreach (var file in d.GetFiles()) {
+
                 string text = File.ReadAllText(file.FullName);
                 string title = file.Name;
                 playbooks.Add(new Playbook(text, title));
+                
             }
         }
 
