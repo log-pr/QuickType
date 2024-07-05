@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Diagnostics;
 using QuickTypeGame.PlaybookClass;
 
 namespace QuickTypeGame.Screens {
@@ -8,6 +9,7 @@ namespace QuickTypeGame.Screens {
         QuickType master;
         IEnumerator PBIter;
         bool isNotDone;
+        Stopwatch watch;
 
         public GameScreen(QuickType master) {
 
@@ -17,11 +19,13 @@ namespace QuickTypeGame.Screens {
             PBIter = master.activePlaybook.GetEnumerator();
             isNotDone = PBIter.MoveNext(); //MoveNext returns false when it reaches the end of the collection, isNotDone is tracking this for us so we know when to stop
 
+            watch = System.Diagnostics.Stopwatch.StartNew(); //stopwatch that will count how long it takes to finish the playbook
+
         }
 
         public void Show() {
 
-            Console.WriteLine(PBIter.Current);
+            Console.WriteLine(" "+PBIter.Current);
             Console.WriteLine();
 
         }
@@ -31,7 +35,12 @@ namespace QuickTypeGame.Screens {
             if (input == PBIter.Current as string) {
 
                 isNotDone = PBIter.MoveNext(); //MoveNext returns False when itering is done so we know when to stop
-                if (!isNotDone) {master.CurrScreen = new EndScreen();}
+                if (!isNotDone) {
+                    watch.Stop();
+                    master.message = "Your time is " + watch.ElapsedMilliseconds as string;
+                    master.CurrScreen = new EndScreen();
+                    
+                }
 
             } else {
 
