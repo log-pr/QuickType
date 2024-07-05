@@ -27,8 +27,9 @@ namespace QuickTypeGame.PlaybookClass {
                     yield return line;
                     line = "";   
                 }
+            
             }
-
+            yield return line;
         }
 
     }
