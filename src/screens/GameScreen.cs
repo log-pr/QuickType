@@ -14,7 +14,7 @@ namespace QuickTypeGame.Screens {
             this.master = master;
 
             //should always find a playbook in activePlaybook, but otherwise will just display no info then exit
-            PBIter = master.activePlaybook.GetEnumerator() ?? new Playbook("", "").GetEnumerator();
+            PBIter = master.activePlaybook.GetEnumerator();
             isNotDone = PBIter.MoveNext(); //MoveNext returns false when it reaches the end of the collection, isNotDone is tracking this for us so we know when to stop
 
         }

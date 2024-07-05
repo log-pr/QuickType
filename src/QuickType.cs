@@ -33,7 +33,7 @@ namespace QuickTypeGame {
         private List<Playbook> playbooks;
         public List<Playbook> Playbooks {get {return playbooks ?? [];}}
 
-        public Playbook? activePlaybook;
+        public Playbook activePlaybook;
 
         private string currentDirectory;
 
@@ -45,6 +45,7 @@ namespace QuickTypeGame {
             currentDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) ?? "";
             prsPath = Path.Combine(currentDirectory, "../../../prs");
             playbooks = [];
+            activePlaybook = new("", "");
             InitPlaybooks();
 
         }
