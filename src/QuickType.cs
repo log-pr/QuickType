@@ -42,7 +42,7 @@ namespace QuickTypeGame {
             CurrScreen = new MainMenuScreen(this);
             message = "";
             input = "";
-            currentDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) ?? "";
+            currentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ""; //possibly needs to be .GetEntryAssembly() or GetCallingAssembly() instead
             prsPath = Path.Combine(currentDirectory, "../../../prs");
             playbooks = [];
             activePlaybook = new("", "");
