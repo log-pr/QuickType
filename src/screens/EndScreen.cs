@@ -4,7 +4,8 @@ namespace QuickTypeGame.Screens {
 
         public void Show() {
 
-            Console.WriteLine("Game Over.");
+            Console.WriteLine("Game Over. Press 'q' to quit.");
+            Console.WriteLine();
 
         }
 
