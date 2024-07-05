@@ -84,7 +84,7 @@ namespace QuickTypeGame.Screens {
                 if (input == "b") {
 
                     gamemodeIsSelected = false;
-                    master.activePlaybook = null;
+                    master.activePlaybook = new("","");
                     playbookIsSelected = false;
 
                 } else if (input == "") {
