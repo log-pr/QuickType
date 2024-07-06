@@ -11,7 +11,7 @@ namespace QuickTypeGame.Screens {
         public PreGameScreen(QuickType master) {
 
             this.master = master;
-            gamemodeIsSelected = false;
+            gamemodeIsSelected = true; //will need to be changed to 'false' once more gamemodes are added, but right now gamemode selection is not needed
             playbookIsSelected = false;
 
         }
