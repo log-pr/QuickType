@@ -35,7 +35,8 @@ namespace QuickTypeGame.Screens {
                 Console.WriteLine();
                 int i = 1;
                 foreach (Playbook p in master.Playbooks) {
-                    Console.WriteLine(i++.ToString()+" "+p.Title);
+                    Console.WriteLine(i++.ToString()+") "+p.Title);
+		    Console.WriteLine("\t("+p.LineLength.ToString()+" lines, "+p.CharLength+" characters)");
                 }
                 Console.WriteLine();
 
