@@ -15,7 +15,7 @@ namespace QuickTypeGame.Screens {
             Console.WriteLine("Game Over.");
             Console.WriteLine();
 	    Console.WriteLine("Enter 'q' to quit.");
-	    Console.WriteLine("Enter 'r' to restart the playbook.");
+	    Console.WriteLine("Enter 'r' to restart the playbook (timer starts immediately).");
 	    Console.WriteLine("Enter 'n' to start a new game.");
             Console.WriteLine();
         }
