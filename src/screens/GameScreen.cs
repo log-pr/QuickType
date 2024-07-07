@@ -38,7 +38,7 @@ namespace QuickTypeGame.Screens {
                 if (!isNotDone) {
                     watch.Stop();
                     master.message = "Your time is " + watch.ElapsedMilliseconds as string;
-                    master.CurrScreen = new EndScreen();
+                    master.CurrScreen = new EndScreen(master);
                     
                 }
 
