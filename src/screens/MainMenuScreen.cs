@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace QuickTypeGame.Screens {
 
     class MainMenuScreen : IScreen {
@@ -38,7 +40,19 @@ namespace QuickTypeGame.Screens {
             } else if (input == "prs") {
 
                 master.message = "The PR sheet has been opened in your default text viewer application.";
-                //System.Diagnostics.Process.Start(master.PrsPath);
+                //System.Diagnostics.Process.Start("vi", master.PrsPath);
+
+		/*Process p = new();
+		p.StartInfo.FileName = master.PrsPath;
+		p.StartInfo.UseShellExecute = true;
+		p.StartInfo.Verb = "runas";
+		p.Start();*/
+
+		if (master.PrsText != "") {
+			master.message = master.PrsText.Trim();
+		} else {
+			master.message = "PRS file is empty.";
+		}
 
             } else if (input.Length >= 3 && input.Substring(0,3) == "un ") {
 

@@ -10,8 +10,8 @@ namespace QuickTypeGame {
 
         public IScreen CurrScreen {get; set;}
 
-        private string prsPath;
-        public string PrsPath {get {return prsPath;}}
+        private string prsText;
+        public string PrsText {get {return prsText;}}
 
         public string message;
         
@@ -42,11 +42,22 @@ namespace QuickTypeGame {
             CurrScreen = new MainMenuScreen(this);
             message = "";
             input = "";
-            currentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ""; //possibly needs to be .GetEntryAssembly() or GetCallingAssembly() instead
-            prsPath = Path.Combine(currentDirectory, "../../../prs");
+            currentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ""; //possibly needs to be .GetEntryAssembly() or GetCallingAssembly() instead	    
+
+	    //init PRS file, read if exists or create if it does not
+	    string prsPath = Path.Combine(currentDirectory, "../../../prs");
+	    if (File.Exists(prsPath)) {
+		prsText = File.ReadAllText(prsPath);
+	    } else {
+	    	File.WriteAllText(prsPath, "");
+		prsText = "";
+	    }
+
             playbooks = [];
             activePlaybook = new("", "");
             InitPlaybooks();
+
+
 
         }
 
