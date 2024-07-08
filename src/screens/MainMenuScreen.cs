@@ -17,13 +17,11 @@ namespace QuickTypeGame.Screens {
             const int LeftSpacing = 15;
             const int RightSpacing = 20;
 
-            Console.WriteLine(string.Format("{0}", "Welcome to QuickType!".PadLeft(LeftSpacing)));
-            Console.WriteLine();
             Console.WriteLine("Choose a command:");
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine(string.Format("{0} -- {1}", "s".PadLeft(LeftSpacing), "Start Game".PadRight(RightSpacing)));
-            Console.WriteLine(string.Format("{0} -- {1}", "prs".PadLeft(LeftSpacing), "View the PR Sheet".PadRight(RightSpacing)));
+            Console.WriteLine(string.Format("{0} -- {1}", "prs".PadLeft(LeftSpacing), "View the Personal Record Sheet".PadRight(RightSpacing)));
             Console.WriteLine(string.Format("{0} -- {1}", "un <username>".PadLeft(LeftSpacing), "Set Username".PadRight(RightSpacing)));
             Console.WriteLine(string.Format("{0} -- {1}", "q".PadLeft(LeftSpacing), "Quit (Any Screen)".PadRight(RightSpacing)));
             Console.WriteLine();

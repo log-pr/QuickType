@@ -17,6 +17,7 @@ namespace QuickTypeGame.Screens {
 	    Console.WriteLine("Enter 'q' to quit.");
 	    Console.WriteLine("Enter 'r' to restart the playbook (timer starts immediately).");
 	    Console.WriteLine("Enter 'n' to start a new game.");
+	    Console.WriteLine("Enter 'm' to return to the Main Menu.");
             Console.WriteLine();
         }
 
@@ -26,6 +27,8 @@ namespace QuickTypeGame.Screens {
 
 	    if (input == "n") {master.CurrScreen = new PreGameScreen(master);}
 
-        }        
+	    if (input == "m") {master.CurrScreen = new MainMenuScreen(master);}
+       
+       	}  	
     }
 }

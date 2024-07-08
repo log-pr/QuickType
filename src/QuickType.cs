@@ -53,6 +53,7 @@ namespace QuickTypeGame {
 		prsText = "";
 	    }
 
+	    //inits each playbook file in the playbook folder and creates a playbook object for each of them
             playbooks = [];
             activePlaybook = new("", "");
             InitPlaybooks();
@@ -99,6 +100,7 @@ namespace QuickTypeGame {
         static void Main(string[] args){
 
             var master = new QuickType();
+	    master.message = "Welcome to QuickType!";
             master.Play();
 
         }
