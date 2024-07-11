@@ -36,8 +36,10 @@ namespace QuickTypeGame.Screens {
 
                 isNotDone = PBIter.MoveNext(); //MoveNext returns False when itering is done so we know when to stop
                 if (!isNotDone) {
+
                     watch.Stop();
-                    master.message = "Your time is " + watch.ElapsedMilliseconds as string;
+                    master.Time = watch.ElapsedMilliseconds;
+                    master.message = "Your time is " + $"{master.Time:n0}" + " ms.";
                     master.CurrScreen = new EndScreen(master);
                     
                 }

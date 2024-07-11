@@ -8,9 +8,9 @@ namespace QuickTypeGame.PlaybookClass {
         private string text;
         private string title;
         public string Title {get {return title;}}
-	private int lineLength;
-	public int LineLength {get {return lineLength;}}
-	public int CharLength {get {return text.Length;}}
+    	private int lineLength;
+	    public int LineLength {get {return lineLength;}}
+	    public int CharLength {get {return text.Length;}}
 
         public Playbook(string text, string title) {
             

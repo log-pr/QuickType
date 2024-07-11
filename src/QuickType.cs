@@ -37,6 +37,12 @@ namespace QuickTypeGame {
 
         private string currentDirectory;
 
+        private long time;
+        public long Time {
+            get {return time;}
+            set {time = value;}
+        }
+
         public QuickType() {
 
             CurrScreen = new MainMenuScreen(this);
@@ -47,19 +53,16 @@ namespace QuickTypeGame {
 	    //init PRS file, read if exists or create if it does not
 	    string prsPath = Path.Combine(currentDirectory, "../../../prs");
 	    if (File.Exists(prsPath)) {
-		prsText = File.ReadAllText(prsPath);
+		    prsText = File.ReadAllText(prsPath);
 	    } else {
 	    	File.WriteAllText(prsPath, "");
-		prsText = "";
+		    prsText = "";
 	    }
 
 	    //inits each playbook file in the playbook folder and creates a playbook object for each of them
             playbooks = [];
             activePlaybook = new("", "");
             InitPlaybooks();
-
-
-
         }
 
         public void Play() {
@@ -99,8 +102,7 @@ namespace QuickTypeGame {
 
         static void Main(string[] args){
 
-            var master = new QuickType();
-	    master.message = "Welcome to QuickType!";
+            var master = new QuickType {message = "Welcome to QuickType!"};
             master.Play();
 
         }
