@@ -50,19 +50,25 @@ namespace QuickTypeGame {
             input = "";
             currentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ""; //possibly needs to be .GetEntryAssembly() or GetCallingAssembly() instead	    
 
-	    //init PRS file, read if exists or create if it does not
-	    string prsPath = Path.Combine(currentDirectory, "../../../prs");
-	    if (File.Exists(prsPath)) {
-		    prsText = File.ReadAllText(prsPath);
-	    } else {
-	    	File.WriteAllText(prsPath, "");
-		    prsText = "";
-	    }
+	        //init PRS file, read if exists or create if it does not
+	        string prsPath = Path.Combine(currentDirectory, "../../../prs");
+	        if (File.Exists(prsPath)) {
+		        prsText = File.ReadAllText(prsPath);
+	        } else {
+	    	    File.WriteAllText(prsPath, "");
+		        prsText = "";
+	        }
 
-	    //inits each playbook file in the playbook folder and creates a playbook object for each of them
+	        //inits each playbook file in the playbook folder and creates a playbook object for each of them
             playbooks = [];
             activePlaybook = new("", "");
-            InitPlaybooks();
+            string playbookFolder = Path.Combine(currentDirectory, "../../../playbooks/");
+            DirectoryInfo d = new(playbookFolder);
+            foreach (var file in d.GetFiles()) {
+                string text = File.ReadAllText(file.FullName);
+                string title = file.Name;
+                playbooks.Add(new Playbook(text, title)); 
+            }
         }
 
         public void Play() {
@@ -82,22 +88,6 @@ namespace QuickTypeGame {
 
             }
             
-        }
-
-        void InitPlaybooks() {
-            //for each playbook txt file, create a Playbook instance for it
-            playbooks = [];
-
-            string playbookFolder = Path.Combine(currentDirectory, "../../../playbooks/");
-            DirectoryInfo d = new(playbookFolder);
-
-            foreach (var file in d.GetFiles()) {
-
-                string text = File.ReadAllText(file.FullName);
-                string title = file.Name;
-                playbooks.Add(new Playbook(text, title));
-                
-            }
         }
 
         static void Main(string[] args){
