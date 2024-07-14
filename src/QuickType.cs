@@ -10,6 +10,8 @@ namespace QuickTypeGame {
 
         public IScreen CurrScreen {get; set;}
 
+        private string prsPath;
+
         private string prsText;
         public string PrsText {get {return prsText;}}
 
@@ -51,7 +53,9 @@ namespace QuickTypeGame {
             currentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ""; //possibly needs to be .GetEntryAssembly() or GetCallingAssembly() instead	    
 
 	        //init PRS file, read if exists or create if it does not
-	        string prsPath = Path.Combine(currentDirectory, "../../../prs");
+            //may change this later to not pull the prsText until the prs command is called
+            //this would prevent a possible needless file read and then the prsText variable could be local instad of global
+	        prsPath = Path.Combine(currentDirectory, "../../../prs");
 	        if (File.Exists(prsPath)) {
 		        prsText = File.ReadAllText(prsPath);
 	        } else {
@@ -87,7 +91,15 @@ namespace QuickTypeGame {
                 CurrScreen.ProcessCommand(input);
 
             }
-            
+
+        }
+
+        public void WriteScore() {
+
+            string scoreString = activePlaybook.Title + ": " + username + " - " + time + "\n";
+            prsText += scoreString;
+            File.AppendAllText(prsPath, scoreString);
+
         }
 
         static void Main(string[] args){

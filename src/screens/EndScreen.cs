@@ -7,6 +7,7 @@ namespace QuickTypeGame.Screens {
 	public EndScreen(QuickType master) {
 
 		this.master = master;
+		master.WriteScore();
 
 	}
 

@@ -16,10 +16,10 @@ namespace QuickTypeGame.PlaybookClass {
             
             this.text = text;
             this.title = title;
-	    this.lineLength = 0;
-	    foreach (var i in this) {
-		    lineLength++;
-	    }
+	        this.lineLength = 0;
+	        foreach (var i in this) {
+		        lineLength++;
+	        }
 
         }
 
@@ -28,7 +28,7 @@ namespace QuickTypeGame.PlaybookClass {
             string line = "";
             for (int i = 0; i < text.Length; i++){
                 if (text[i] != '\n') {
-                    line = line + text[i];
+                    line += text[i];
                 } else {
                     yield return line;
                     line = "";   
