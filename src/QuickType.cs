@@ -55,7 +55,7 @@ namespace QuickTypeGame {
 	        //init PRS file, read if exists or create if it does not
             //may change this later to not pull the prsText until the prs command is called
             //this would prevent a possible needless file read and then the prsText variable could be local instad of global
-	        prsPath = Path.Combine(currentDirectory, "../../../prs");
+	        prsPath = Path.Combine(currentDirectory, "../../../prs.csv");
 	        if (File.Exists(prsPath)) {
 		        prsText = File.ReadAllText(prsPath);
 	        } else {
@@ -96,7 +96,7 @@ namespace QuickTypeGame {
 
         public void WriteScore() {
 
-            string scoreString = activePlaybook.Title + ": " + username + " - " + time + "\n";
+            string scoreString = activePlaybook.Title + "," + username + "," + time + "\n";
             prsText += scoreString;
             File.AppendAllText(prsPath, scoreString);
 
