@@ -1,6 +1,6 @@
 A personal project that uses C#/.NET to execute a fun little command-line interface typing game.
 
-You will need to have the .NET framework installed and compile/build the source code yourself. Theoretically all you should need to do it execute "dotnet run" from the command-line inside your local repo too run the program.
+You will need to have the .NET framework installed and compile/build the source code yourself. Theoretically all you should need to do it execute "dotnet run" from the command-line inside your local repo to run the program.
 
 There are no non-standard dependancies and it should work with .NET 8 (and possibly earlier versions) straight out of the box.
 
